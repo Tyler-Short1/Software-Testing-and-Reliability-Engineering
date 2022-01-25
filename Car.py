@@ -9,11 +9,11 @@ class Car:
             self.currentspeed = 0
             self.acceleration = 0
 
-        elif self.currentspeed < self.maxspeed:
+        elif self.currentspeed + acceleration <= self.maxspeed:
             self.currentspeed += acceleration
             self.fuellevel = self.fuellevel-1
-            if self.currentspeed > self.maxspeed:
-                self.currentspeed = self.maxspeed
+        else:
+            self.currentspeed = self.maxspeed
 
     def brake(self, brakespeed):
 
