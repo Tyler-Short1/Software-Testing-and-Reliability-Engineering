@@ -11,7 +11,7 @@ class Car:
 
         elif self.currentspeed + acceleration <= self.maxspeed:
             self.currentspeed += acceleration
-            self.fuellevel = self.fuellevel-1
+            self.fuellevel -=1
         else:
             self.currentspeed = self.maxspeed
 
